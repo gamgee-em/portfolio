@@ -1,7 +1,6 @@
 .background {
   position: fixed;
-  top: -40%;
-  height: 200%;
-  width: 100vw;
+  width: 100%;
+  max-width: 1920px;
   z-index: -1;
 }

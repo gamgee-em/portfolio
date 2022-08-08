@@ -2,6 +2,7 @@ import './NavBar.css';
 import { motion } from 'framer-motion';
 import resumePDF from './resume-sam-sweigart.pdf';
 import { CgSoftwareDownload } from 'react-icons/cg';
+
 const NavBar = () => {
   const navAnimate = {
     offScreen: {

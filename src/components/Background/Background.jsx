@@ -1,5 +1,5 @@
 import './Background.css';
-import { useState , useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import mainBgImg from '../../imgs/mainbg.jpg';
 
 const Background = () => {
@@ -11,7 +11,6 @@ const Background = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    /* console.log('scrolling'); */
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

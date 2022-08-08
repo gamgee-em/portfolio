@@ -14,16 +14,13 @@ const Portfolio = () => {
   let [tuple, setTuple] = useState([null, count]);
 
   //* Check which direction element should animate
-  if (tuple[1] !== count) {
-    setTuple([tuple[1], count]);
-  }
+  if (tuple[1] !== count) setTuple([tuple[1], count]);
 
   //* check value of previous render
   let prev = tuple[0];
 
   //* check value from onClick to determine which exit animation
   let direction = count > prev ? 'increasing' : 'decreasing';
-  //console.log(direction);
 
   //* motion element variants
   let portfolioVariants = {
@@ -63,16 +60,30 @@ const Portfolio = () => {
   }, [isInView]); */
 
   const portImgs = [
-    { id: 1, title: 'MooLah', path: mooLah, repo: 'https://github.com/gamgee-em/TipTrackerApp', url:'https://moolah-tip-tracker.herokuapp.com/'  },
-    { id: 2, title: 'Budget PWA', path: spendApp, repo: 'https://github.com/gamgee-em/Spend-App', url:'https://thawing-tundra-12672.herokuapp.com/'},
-    { id: 3, title: 'Tick List', path: tickList, repo: 'https://github.com/gamgee-em/Tick-List', url:'https://ge-tick-list.herokuapp.com/'},
+    {
+      id: 1,
+      title: 'Budget PWA',
+      path: spendApp,
+      repo: 'https://github.com/gamgee-em/Spend-App',
+      url: 'https://thawing-tundra-12672.herokuapp.com/',
+    },
+    {
+      id: 2,
+      title: 'MooLah',
+      path: mooLah,
+      repo: 'https://github.com/gamgee-em/TipTrackerApp',
+      url: 'https://moolah-tip-tracker.herokuapp.com/',
+    },
+    {
+      id: 3,
+      title: 'Tick List',
+      path: tickList,
+      repo: 'https://github.com/gamgee-em/Tick-List',
+      url: 'https://ge-tick-list.herokuapp.com/',
+    },
   ];
 
-  //let currImg = [ mooLah, spendApp, tickList];
-  let currImg = `${portImgs[Math.abs(count) % portImgs.length].path}`;
-  console.log( currImg)
-
-
+  const currImg = `${portImgs[Math.abs(count) % portImgs.length].path}`;
 
   return (
     <section ref={portCard} style={animate} className='portfolio-container'>
@@ -89,9 +100,8 @@ const Portfolio = () => {
           <img
             id='portfolio'
             className='portfolio-img'
-             src={`${portImgs[Math.abs(count) % portImgs.length].path}`}
-            //src={currImg[Math.abs(count) % portImgs.length]}
-            //src={currImg}
+            //src={`${portImgs[Math.abs(count) % portImgs.length].path}`}
+            src={currImg}
             alt='Screenshot of portfolio.'
           />
           <a
@@ -99,8 +109,8 @@ const Portfolio = () => {
             className='app-links'
             target='_blank'
             rel='noreferrer'
-          >            
-            View
+          >
+            <p> View </p>
           </a>
         </motion.div>
       </AnimatePresence>

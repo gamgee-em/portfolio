@@ -4,7 +4,7 @@
 [![GitHub][github-shield]][github-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![MIT License][license-shield]][license-url]
-[![JavaScript][javascript-shield]][javascript-url] 
+[![JavaScript][javascript-shield]][javascript-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
@@ -96,21 +96,15 @@
 
 [github-shield]: https://img.shields.io/badge/Gamgee--Em-%23121011.svg?style=for-the-badge&logo=github&logoColor=black&colorB=bf7e32
 [github-url]: https://github.com/gamgee-em
-
 [javascript-shield]: https://img.shields.io/badge/javascript-Es6-black?style=for-the-badge&logo=javascript&logoColor=pink
 [javascript-url]: https://www.w3schools.com/js/js_es6.asp
-
 [contributors-shield]: https://img.shields.io/github/contributors/gamgee-em/portfolio.svg?style=for-the-badge&color=yellow
 [contributors-url]: https://github.com/gamgee-em/portfolio/graphs/contributors
-
 [stars-shield]: https://img.shields.io/github/stars/gamgee-em/portfolio.svg?style=for-the-badge&color=ec9198&labelColor=black
 [stars-url]: https://github.com/gamgee-em/Tick-List/stargazers
-
 [issues-shield]: https://img.shields.io/github/issues/gamgee-em/portfolio.svg?style=for-the-badge&color=5431a2
 [issues-url]: https://github.com/gamgee-em/Tick-List/issues
-
 [license-shield]: https://img.shields.io/github/license/gamgee-em/portfolio.svg?style=for-the-badge&color=ad7dbd
 [license-url]: https://github.com/gamgee-em/portfolio/blob/main/LICENSE.txt
-
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&logoColor=black&colorB=blue
 [linkedin-url]: https://linkedin.com/in/gamgee-em

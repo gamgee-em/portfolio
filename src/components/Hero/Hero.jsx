@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import portraitImg from '../../imgs/portrait.png';
 
 const Hero = () => {
-  //? look into framer-motion stagger children to reduce variants
+  //? look into framer-motion staggerChildren to reduce variants
   const introAnimate = {
     offScreen: {
       y: 1100,
