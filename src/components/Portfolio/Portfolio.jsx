@@ -1,7 +1,7 @@
 import './Portfolio.css';
-import mooLah from '../../imgs/moolah.jpg';
-import spendApp from '../../imgs/spendapp.jpg';
-import tickList from '../../imgs/ticklist.jpg';
+import mooLah from '../../imgs/moolah.png';
+import spendApp from '../../imgs/spendapp.png';
+import tickList from '../../imgs/ticklist.png';
 import { /* useEffect, */ useRef, useState } from 'react';
 import { AnimatePresence, motion, useInView } from 'framer-motion';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
