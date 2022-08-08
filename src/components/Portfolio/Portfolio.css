@@ -1,0 +1,80 @@
+.portfolio-container {
+  position: relative;
+  display: grid;
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-self: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.portfolio-card {
+  position: absolute;
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  height: 50%;
+  width: 55%;
+  border-radius: 8px;
+}
+
+.portfolio-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.app-links {
+  position: absolute;
+  padding: 1.5% 2.5%;
+  bottom: 1rem;
+  right: 1rem;
+
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  background-color: teal;
+  border-radius: 8px;
+  text-shadow: 0.5px 1px rgba(0, 0, 0);
+  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0);
+  text-decoration: none;
+
+  cursor: pointer;
+  transition: all 0.25s ease-in;
+}
+
+.app-links:hover {
+  color: teal;
+  background-color: rgb(255, 255, 255);
+  text-shadow: 1px 1px rgb(255, 255, 255);
+  box-shadow: 0px 0px 0px 2px rgb(255, 255, 255);
+}
+
+.controls {
+  position: relative;
+  grid-row: 2 / 3;
+  justify-self: center;
+  align-self: center;
+  top: 2rem;
+  color: rgb(255, 255, 255);
+}
+
+.controls svg {
+  height: auto;
+  width: 3rem;
+  margin: 0.5rem;
+  cursor: pointer;
+
+  stroke: rgb(0, 0, 0);
+  stroke-width: 0;
+  transition: all 0.25s ease-in;
+}
+
+.controls svg:hover {
+  fill: black;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 0.7;
+}

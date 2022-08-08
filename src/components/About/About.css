@@ -1,0 +1,20 @@
+.about-container {
+  position: relative;
+  display: grid;
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  height: 100vh;
+  align-items: center;
+
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.about {
+  position: absolute;
+  text-align: center;
+  margin: 0 5rem;
+
+  text-shadow: 2px 1px 1px black;
+}

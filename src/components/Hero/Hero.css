@@ -1,0 +1,51 @@
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  justify-self: center;
+  align-self: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 70%;
+}
+
+.intro {
+  align-self: end;
+
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 1px 1px rgba(0, 0, 0);
+}
+
+.portrait {
+  justify-self: end;
+  align-self: end;
+}
+
+.start-btn {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  justify-self: center;
+  align-self: center;
+  padding: 1rem 3rem;
+
+  color: rgb(255, 255, 255);
+  background-color: teal;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  text-shadow: 0.5px 1px rgba(0, 0, 0);
+  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0);
+
+  transition-property: background-color, text-shadow, box-shadow;
+  transition-duration: 0.25s;
+}
+
+.start-btn:hover {
+  color: teal;
+  background-color: rgb(255, 255, 255);
+  text-shadow: 1px 1px rgb(255, 255, 255);
+  box-shadow: 0px 0px 0px 2px rgb(255, 255, 255);
+}
