@@ -26,3 +26,10 @@ body::-webkit-scrollbar {
   max-height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+@media screen and (max-width: 576px) {
+  .wrapper {
+    width: 100vw;
+    justify-content: center;
+  }
+}

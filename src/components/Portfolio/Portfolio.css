@@ -80,3 +80,26 @@
   stroke: rgb(255, 255, 255);
   stroke-width: 0.7;
 }
+
+@media screen and (max-width: 576px) {
+
+  .portfolio-container {
+    height: 50vh;
+  }
+
+  .portfolio-img {
+    /* min-height: 100%; */
+
+    position: relative;
+    width: 90%;
+/*     height: auto;
+ */  }
+
+  .app-links {
+    width: 90%;
+  }
+
+  .controls {
+    bottom: -8rem;
+  }
+}

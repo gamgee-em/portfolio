@@ -18,3 +18,10 @@
 .about {
   text-shadow: 2px 1px 1px black;
 }
+
+@media screen and (max-width: 576px) {
+  .about-container {
+    height: 50vh;
+    font-size: 1.2rem;
+  }
+}

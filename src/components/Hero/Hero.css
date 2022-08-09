@@ -11,7 +11,7 @@
 
 .intro {
   align-self: end;
-  font-size: 3rem;
+  font-size: 2.75rem;
   color: rgb(255, 255, 255);
   text-shadow: 2px 1px 1px rgba(0, 0, 0);
 }
@@ -45,4 +45,39 @@
   background-color: rgb(255, 255, 255);
   text-shadow: 0.5px 0.5px teal;
   box-shadow: 0px 0px 0px 1px rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 576px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    /* justify-content: center; */
+    text-align: center;
+  }
+
+  .intro,
+  .portrait,
+  .start-btn {
+    align-self: center;
+    grid-column: 1 / 2;
+  }
+
+  .intro {
+    align-self: start;
+    font-size: 2rem;
+    grid-row: 2 / 3;
+  }
+
+  .start-btn {
+    align-self: start;
+  }
+
+  .portrait {
+    height: 50%;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .start-btn {
+    grid-row: 3 / 4;
+  }
 }
