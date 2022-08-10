@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.8166e55c.css",
-    "main.js": "/portfolio/static/js/main.a2b61177.js",
+    "main.css": "/portfolio/static/css/main.0c1296f2.css",
+    "main.js": "/portfolio/static/js/main.af3df990.js",
     "static/media/mainbg.jpg": "/portfolio/static/media/mainbg.afc278b4873c17a8a47d.jpg",
     "static/media/moolah.png": "/portfolio/static/media/moolah.46293080d64975a3ce2d.png",
     "static/media/resume-sam-sweigart.pdf": "/portfolio/static/media/resume-sam-sweigart.0b5278a2d6975d2e73bf.pdf",
@@ -9,11 +9,11 @@
     "static/media/spendapp.png": "/portfolio/static/media/spendapp.fa8bc228da6f19a3c235.png",
     "static/media/ticklist.png": "/portfolio/static/media/ticklist.0ba59c4ffc86df67fac6.png",
     "index.html": "/portfolio/index.html",
-    "main.8166e55c.css.map": "/portfolio/static/css/main.8166e55c.css.map",
-    "main.a2b61177.js.map": "/portfolio/static/js/main.a2b61177.js.map"
+    "main.0c1296f2.css.map": "/portfolio/static/css/main.0c1296f2.css.map",
+    "main.af3df990.js.map": "/portfolio/static/js/main.af3df990.js.map"
   },
   "entrypoints": [
-    "static/css/main.8166e55c.css",
-    "static/js/main.a2b61177.js"
+    "static/css/main.0c1296f2.css",
+    "static/js/main.af3df990.js"
   ]
 }
