@@ -1,14 +1,10 @@
 import './About.css';
-import { useRef/* , useEffect */ } from 'react';
+import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
-/*   useEffect(() => {
-    console.log('About is in view: ', isInView);
-  }, [isInView]); */
 
   let animate = {
     transform: isInView ? 'none' : 'translateY(200px)',
@@ -19,16 +15,15 @@ const About = () => {
   return (
     <section id='about' className='about-container'>
       <p ref={ref} className='about' style={animate}>
-        Welcome to my portfolio page. My name is Sam Sweigart. I currently
-        reside in Highland, NY and identify as a Full Stack Web Developer. In my
-        search for a new career in 2019, I began exploring HTML and CSS. As someone who
-        has a near insatiable curiosity for information and problem solving, I
-        quickly knew that Web Development was something I wanted to pursue.
-        Thank you for stopping by my page and taking the time to get to know me
-        a bit better. This space will continue to be a work in progress as I
-        polish my current skills and expand my scope into other aspects of Web
-        Development. Please check back regularly, as I would love to hear any
-        feedback you may have to offer.
+        Welcome to my portfolio! I'm Sam Sweigart, a full stack web developer
+        and avid rock climber currently residing in Highland, NY. In 2019 I
+        began learning HTML and CSS, later followed by JavaScript and became
+        quickly enamored with the craft. Shortly after, I enrolled in the
+        University of Pennsylvania's Full Stack Web Developement Program and
+        received a certificate upon completion. Since then, I have been actively
+        expanding my skill set and building applications. I'm always looking for
+        fellow developers to collaborate with, so please do not hestiate to
+        reach out!
       </p>
     </section>
   );

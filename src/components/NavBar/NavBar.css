@@ -42,3 +42,9 @@ nav a svg {
   width: auto;
   padding: 0 0.25rem 0 0;
 }
+
+@media screen and (max-width: 576px) {
+  #nav-bar {
+    display: none;
+  }
+}

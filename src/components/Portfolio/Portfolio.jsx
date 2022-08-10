@@ -2,15 +2,13 @@ import './Portfolio.css';
 import mooLah from '../../imgs/moolah.png';
 import spendApp from '../../imgs/spendapp.png';
 import tickList from '../../imgs/ticklist.png';
-import { /* useEffect, */ useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { AnimatePresence, motion, useInView } from 'framer-motion';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
-//import useMeasure from 'react-use-measure';
 
 const Portfolio = () => {
   //* Carousel animations
   let [count, setCount] = useState(1);
-  //let [ref, { width }] = useMeasure();
   let [tuple, setTuple] = useState([null, count]);
 
   //* Check which direction element should animate
@@ -55,10 +53,6 @@ const Portfolio = () => {
     transition: 'all 0.9s cubic-bezier(0.9, 1, 0.55, 1) 0.2s',
   };
 
-  /* useEffect(() => {
-    console.log('Portfolio is in view: ', isInView);
-  }, [isInView]); */
-
   const portImgs = [
     {
       id: 1,
@@ -100,7 +94,6 @@ const Portfolio = () => {
           <img
             id='portfolio'
             className='portfolio-img'
-            //src={`${portImgs[Math.abs(count) % portImgs.length].path}`}
             src={currImg}
             alt='Screenshot of portfolio.'
           />

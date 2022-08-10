@@ -5,11 +5,10 @@
   grid-row: 2 / 3;
   justify-self: center;
   align-items: center;
-  justify-items: center;
   text-align: center;
   height: 100vh;
   width: 90%;
-  max-height: 1080px;
+  max-height: 900px;
   color: white;
   font-size: 2rem;
   font-weight: bold;
@@ -21,7 +20,7 @@
 
 @media screen and (max-width: 576px) {
   .about-container {
-    height: 50vh;
+    height: 60vh;
     font-size: 1.2rem;
   }
 }
