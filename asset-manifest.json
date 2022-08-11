@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.0c1296f2.css",
-    "main.js": "/portfolio/static/js/main.af3df990.js",
+    "main.js": "/portfolio/static/js/main.f96c8b97.js",
     "static/media/mainbg.jpg": "/portfolio/static/media/mainbg.afc278b4873c17a8a47d.jpg",
     "static/media/moolah.png": "/portfolio/static/media/moolah.46293080d64975a3ce2d.png",
     "static/media/resume-sam-sweigart.pdf": "/portfolio/static/media/resume-sam-sweigart.0b5278a2d6975d2e73bf.pdf",
@@ -10,10 +10,10 @@
     "static/media/ticklist.png": "/portfolio/static/media/ticklist.0ba59c4ffc86df67fac6.png",
     "index.html": "/portfolio/index.html",
     "main.0c1296f2.css.map": "/portfolio/static/css/main.0c1296f2.css.map",
-    "main.af3df990.js.map": "/portfolio/static/js/main.af3df990.js.map"
+    "main.f96c8b97.js.map": "/portfolio/static/js/main.f96c8b97.js.map"
   },
   "entrypoints": [
     "static/css/main.0c1296f2.css",
-    "static/js/main.af3df990.js"
+    "static/js/main.f96c8b97.js"
   ]
 }
