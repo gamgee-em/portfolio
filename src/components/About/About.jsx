@@ -19,10 +19,10 @@ const About = () => {
         and avid rock climber currently residing in Highland, NY. In 2019 I
         began learning HTML and CSS, later followed by JavaScript and became
         quickly enamored with the craft. Shortly after, I enrolled in the
-        University of Pennsylvania's Full Stack Web Developement Program and
+        University of Pennsylvania's Full Stack Web Development Program and
         received a certificate upon completion. Since then, I have been actively
         expanding my skill set and building applications. I'm always looking for
-        fellow developers to collaborate with, so please do not hestiate to
+        fellow developers to collaborate with, so please do not hesitate to
         reach out!
       </p>
     </section>

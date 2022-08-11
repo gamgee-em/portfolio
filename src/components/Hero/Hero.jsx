@@ -66,8 +66,8 @@ const Hero = () => {
         animate={'onScreen'}
         className='intro'
       >
-        I'm Sam, a Web Developer and passionate problem solver{/*  living in
-        Highland, NY */}. I build full stack javascript applications
+        I'm Sam, a Web Developer and passionate problem solver. I build full
+        stack javascript applications
       </motion.h2>
       <motion.img
         variants={imgAnimate}
