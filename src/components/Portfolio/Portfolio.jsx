@@ -1,4 +1,5 @@
 import './Portfolio.css';
+import bucketList from '../../imgs/bucketlist.png'
 import mooLah from '../../imgs/moolah.png';
 import spendApp from '../../imgs/spendapp.png';
 import tickList from '../../imgs/ticklist.png';
@@ -74,6 +75,13 @@ const Portfolio = () => {
       path: tickList,
       repo: 'https://github.com/gamgee-em/Tick-List',
       url: 'https://ge-tick-list.herokuapp.com/',
+    },
+    {
+      id: 4,
+      title: 'Bucket List',
+      path: bucketList,
+      repo: 'https://github.com/gamgee-em/Bucket-List',
+      url: 'https://gamgee-em.github.io/Bucket-List/',
     },
   ];
 
