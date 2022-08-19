@@ -56,7 +56,7 @@
         <th colspan="1"> Front End </th>
     </tr>
     <tr> 
-        <td> <a href='https://www.npmjs.com/package/react'> React </a></td> 
+        <td> <a href='https://www.npmjs.com/package/react'> React.js </a></td> 
     </tr>
     <tr> 
         <td> <a href='https://www.npmjs.com/package/framer-motion'> Framer Motion </a></td>
