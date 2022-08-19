@@ -3,6 +3,8 @@ import bucketList from '../../imgs/bucketlist.png'
 import mooLah from '../../imgs/moolah.png';
 import spendApp from '../../imgs/spendapp.png';
 import tickList from '../../imgs/ticklist.png';
+import employeeCms from '../../imgs/employeecms.png';
+import ecommerceApi from '../../imgs/ecommerce.png'
 import { useRef, useState } from 'react';
 import { AnimatePresence, motion, useInView } from 'framer-motion';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
@@ -82,6 +84,20 @@ const Portfolio = () => {
       path: bucketList,
       repo: 'https://github.com/gamgee-em/Bucket-List',
       url: 'https://gamgee-em.github.io/Bucket-List/',
+    },
+    {
+      id: 5,
+      title: 'Employee CMS',
+      path: employeeCms,
+      repo: 'https://github.com/gamgee-em/Employee-CMS',
+      url: 'https://github.com/gamgee-em/Employee-CMS',
+    },
+    {
+      id: 6,
+      title: 'E-Commerce API',
+      path: ecommerceApi,
+      repo: 'https://github.com/gamgee-em/E-Commerce-ORM',
+      url: 'https://github.com/gamgee-em/E-Commerce-ORM',
     },
   ];
 
