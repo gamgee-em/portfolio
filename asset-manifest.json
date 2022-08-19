@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.0c1296f2.css",
-    "main.js": "/portfolio/static/js/main.f96c8b97.js",
+    "main.css": "/portfolio/static/css/main.6e5c471a.css",
+    "main.js": "/portfolio/static/js/main.de020f14.js",
     "static/media/mainbg.jpg": "/portfolio/static/media/mainbg.afc278b4873c17a8a47d.jpg",
     "static/media/moolah.png": "/portfolio/static/media/moolah.46293080d64975a3ce2d.png",
-    "static/media/resume-sam-sweigart.pdf": "/portfolio/static/media/resume-sam-sweigart.0b5278a2d6975d2e73bf.pdf",
+    "static/media/resume-sam-sweigart.pdf": "/portfolio/static/media/resume-sam-sweigart.0151048c86875dd07ee6.pdf",
+    "static/media/ecommerce.png": "/portfolio/static/media/ecommerce.388e0a1db3397ed946d7.png",
     "static/media/portrait.png": "/portfolio/static/media/portrait.4800526ac0297038e321.png",
+    "static/media/employeecms.png": "/portfolio/static/media/employeecms.e83f8aa58bdaa689946c.png",
     "static/media/spendapp.png": "/portfolio/static/media/spendapp.fa8bc228da6f19a3c235.png",
+    "static/media/bucketlist.png": "/portfolio/static/media/bucketlist.306f2ce879afee754c65.png",
     "static/media/ticklist.png": "/portfolio/static/media/ticklist.0ba59c4ffc86df67fac6.png",
     "index.html": "/portfolio/index.html",
-    "main.0c1296f2.css.map": "/portfolio/static/css/main.0c1296f2.css.map",
-    "main.f96c8b97.js.map": "/portfolio/static/js/main.f96c8b97.js.map"
+    "main.6e5c471a.css.map": "/portfolio/static/css/main.6e5c471a.css.map",
+    "main.de020f14.js.map": "/portfolio/static/js/main.de020f14.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c1296f2.css",
-    "static/js/main.f96c8b97.js"
+    "static/css/main.6e5c471a.css",
+    "static/js/main.de020f14.js"
   ]
 }
