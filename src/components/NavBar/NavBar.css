@@ -60,8 +60,4 @@ nav a svg {
   nav a:nth-child(-n+3) {
     display: none;
   }
-
-  nav a:nth-child(4n) {
-    position: absolute;
-  }
 } 
