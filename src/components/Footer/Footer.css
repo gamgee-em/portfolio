@@ -38,6 +38,13 @@ footer .social-icons {
 @media screen and (max-width: 576px) {
   footer {
     height: 3rem;
+   /*  padding-bottom: 1rem;
+    justify-content: center; */
+  }
+
+  footer .copywrite {
+    /* justify-content: center; */
+    grid-column: 1 / 3;
   }
 
   footer .social-icons {
@@ -48,8 +55,11 @@ footer .social-icons {
     bottom: 2rem;
     margin: 1rem 0;
   }
-
-  .social-icons svg {
-    width: 1.75rem;
+  div a:nth-child(1) svg {
+    width: 1.5rem
   }
+
+/*   .social-icons svg {
+    width: 1.75rem;
+  } */
 }

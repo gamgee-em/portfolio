@@ -12,8 +12,10 @@
 }
 
 .portfolio-card {
-  position: relative;
   display: grid;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  position: relative;
   border-radius: 8px;
 }
 
@@ -54,9 +56,11 @@
 }
 
 .controls {
-  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  align-self: end;
   color: rgb(255, 255, 255);
-  bottom: 12vh;
+  margin: 0 0 2rem 0;
 }
 
 .controls svg {
@@ -87,6 +91,7 @@
   }
 
   .controls {
-    bottom: 3vh;
-  }
+    bottom: -1rem;
+    position: relative;
+ }
 }

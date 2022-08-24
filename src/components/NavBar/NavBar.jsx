@@ -1,9 +1,15 @@
 import './NavBar.css';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import resumePDF from './resume-sam-sweigart.pdf';
 import { CgSoftwareDownload } from 'react-icons/cg';
 
 const NavBar = () => {
+  const [color, setColor] = useState(false);
+  const handleNavBg = () => window.scrollY >= 150 ? setColor(true) : setColor(false);
+
+  window.addEventListener('scroll', handleNavBg);
+
   const navAnimate = {
     offScreen: {
       y: -100,
@@ -22,8 +28,10 @@ const NavBar = () => {
     },
   };
 
+
   return (
     <motion.nav
+      className={color ? 'nav nav-bg' : 'nav'}
       variants={navAnimate}
       initial={'offScreen'}
       animate={'onScreen'}

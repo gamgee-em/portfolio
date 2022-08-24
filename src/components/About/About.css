@@ -20,7 +20,7 @@
 
 @media screen and (max-width: 576px) {
   .about-container {
-    height: 60vh;
+    height: 45vh;
     font-size: 1.2rem;
   }
 }

@@ -7,7 +7,7 @@ const Footer = () => {
     <footer>
       <p className='copywrite'> &copy; Sam Sweigart </p>
       <div className='social-icons'>
-      <a href='https://github.com/gamgee-em' target='_blank' rel='noreferrer'>
+        <a href='https://github.com/gamgee-em' target='_blank' rel='noreferrer'>
           <GoMarkGithub className='github' />
         </a>
         <a
