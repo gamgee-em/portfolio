@@ -1,5 +1,6 @@
 import About from './components/About/About';
 import Background from './components/Background/Background';
+import Contact from './components/Contact/Contact';
 import Hero from './components/Hero/Hero';
 import NavBar from './components/NavBar/NavBar';
 import Portfolio from './components/Portfolio/Portfolio';
@@ -13,6 +14,7 @@ function App() {
       <Hero />
       <About />
       <Portfolio />
+      <Contact />
       <Footer />
     </div>
   );
