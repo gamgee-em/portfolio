@@ -19,7 +19,7 @@ const Background = () => {
       src={mainBgImg}
       className='background'
       style={{ transform: `translateY(-${offSetY * 0.25}px)` }}
-      alt='Raindrops rippling on a puddle that is reflecting city stree lights'
+      alt='Raindrops rippling on a puddle that is reflecting city street lights'
     />
   );
 };

@@ -1,10 +1,10 @@
 import './Portfolio.css';
-import bucketList from '../../imgs/bucketlist.png'
+import bucketList from '../../imgs/bucketlist.png';
 import mooLah from '../../imgs/moolah.png';
 import spendApp from '../../imgs/spendapp.png';
 import tickList from '../../imgs/ticklist.png';
 import employeeCms from '../../imgs/employeecms.png';
-import ecommerceApi from '../../imgs/ecommerce.png'
+import ecommerceApi from '../../imgs/ecommerce.png';
 import { useRef, useState } from 'react';
 import { AnimatePresence, motion, useInView } from 'framer-motion';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
@@ -119,16 +119,16 @@ const Portfolio = () => {
             id='portfolio'
             className='portfolio-img'
             src={currImg}
-            alt='Screenshot of portfolio.'
+            alt='Screenshot of portfolio application.'
           />
-          <a
-            href={portImgs[Math.abs(count) % portImgs.length].url}
-            className='app-links'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <p> View </p>
-          </a>
+          <div className='overlay' target='_blank' rel='noreferrer'>
+            <h3 className='title'>
+              {portImgs[Math.abs(count) % portImgs.length].title}
+            </h3>
+
+            <a href={portImgs[Math.abs(count) % portImgs.length].url}>Site</a>
+            <a href={portImgs[Math.abs(count) % portImgs.length].repo}>Code</a>
+          </div>
         </motion.div>
       </AnimatePresence>
       <div className='controls'>
