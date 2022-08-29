@@ -57,7 +57,7 @@ nav a svg {
 
 @media screen and (max-width: 576px) {
  
-  nav a:nth-child(-n+3) {
+  nav a:nth-child(-n+1), nav a:nth-child(-n+2) {
     display: none;
   }
 

@@ -4,45 +4,76 @@ import { motion } from 'framer-motion';
 import resumePDF from './resume-sam-sweigart.pdf';
 import { CgSoftwareDownload } from 'react-icons/cg';
 
-const NavBar = () => {
+const NavBar = ({ handleShowContact }) => {
   const [color, setColor] = useState(false);
-  const handleNavBg = () => window.scrollY >= 150 ? setColor(true) : setColor(false);
+  const handleNavBg = () =>
+    window.scrollY >= 150 ? setColor(true) : setColor(false);
 
   window.addEventListener('scroll', handleNavBg);
 
-  const navAnimate = {
-    offScreen: {
+  const navContainerVariants = {
+    initial: {
       y: -100,
-      opacity: 0.1,
-      scale: 1,
     },
-    onScreen: {
+    animate: {
       y: 0,
-      opacity: 1,
-      scale: 1,
       transition: {
-        duration: 1,
-        delay: 0.5,
-        ease: [0, 0.7, 0.3, 1],
+        type: 'spring',
+        staggerChildren: 1.5,
+        delayChildren: .5,
       },
     },
   };
 
+  const navChildVariants = {
+    intial: {
+      y: -100,
+      opacity: 0,
+      scale: 0.75,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: 'spring',
+        bounce: 0.25,
+      },
+    },
+  };
 
   return (
     <motion.nav
+      variants={navContainerVariants}
+      initial={'initial'}
+      animate={'animate'}
       className={color ? 'nav nav-bg' : 'nav'}
-      variants={navAnimate}
-      initial={'offScreen'}
-      animate={'onScreen'}
       id='nav-bar'
     >
-      <a href='#about'> About </a>
-      <a href='#portfolio'> Portfolio </a>
-      <a href='mailto:samuel.sweigart@gmail.com'> Contact </a>
-      <a href={resumePDF} download id='cv' rel='noreferrer' target={'_blank'}>
-        <CgSoftwareDownload /> Resume
-      </a>
+      <motion.a variants={navChildVariants} href='#about'>
+        About
+      </motion.a>
+      <motion.a variants={navChildVariants} href='#portfolio'>
+        Portfolio
+      </motion.a>
+      <motion.a
+        variants={navChildVariants}
+       /*  href='mailto:samuel.sweigart@gmail.com' */
+        onClick={handleShowContact()}
+      >
+        Contact
+      </motion.a>
+      <motion.a
+        variants={navChildVariants}
+        href={resumePDF}
+        download
+        id='cv'
+        rel='noreferrer'
+        target={'_blank'}
+      >
+        <CgSoftwareDownload />
+        Resume
+      </motion.a>
     </motion.nav>
   );
 };

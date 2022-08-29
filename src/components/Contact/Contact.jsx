@@ -1,48 +1,41 @@
-import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import './Contact.css';
 
-const Contact = () => {
-  const [showContact, setShowContact] = useState(false);
-
-  const handleShowContact = () => () =>
-    showContact ? setShowContact(false) : setShowContact(true);
-
+const Contact = ({ showContact }) => {
   const contactModalVariants = {
     initial: {
       opacity: 0,
-      scale: .1,
-      y: '35vh',
-      x: '40vw',
+      scale: 0,
+      y: '-50vh',
+      x: '-12vw',
     },
-    visible: {
+    animate: {
       opacity: 1,
       scale: 1,
       y: 0,
       x: 0,
-     
+      transition: {
+        type: 'spring',
+        bounce: .25
+      }
     },
     exit: {
       opacity: 0,
-      scale: .1,
-      y: '35vh',
-      x: '40vw',
+      scale: 0,
+      y: '-45vh',
+      x: '-12vw',
     },
-    
   };
 
   return (
     <>
-      <button className='contact-btn' onClick={handleShowContact()}>
-        Contact
-      </button>
       <AnimatePresence exitBeforeEnter={true}>
         {showContact && (
           <motion.section
             className='contact'
             variants={contactModalVariants}
             initial='initial'
-            animate='visible'
+            animate='animate'
             exit='exit'
           >
             <h2>Get in touch...</h2>
