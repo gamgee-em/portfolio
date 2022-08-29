@@ -53,7 +53,7 @@ const Contact = ({ showContact }) => {
             />
             <input
               className='email'
-              type='text'
+              type='email'
               name='email'
               placeholder='Your E-mail'
             />

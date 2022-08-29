@@ -5,27 +5,35 @@ import spendApp from '../../imgs/spendapp.png';
 import tickList from '../../imgs/ticklist.png';
 import employeeCms from '../../imgs/employeecms.png';
 import ecommerceApi from '../../imgs/ecommerce.png';
-import { useRef, useState } from 'react';
-import { AnimatePresence, motion, useInView } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import {
+  AnimatePresence,
+  motion,
+  useAnimation,
+  useInView,
+} from 'framer-motion';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 
 const Portfolio = () => {
   //* Carousel animations
   let [count, setCount] = useState(1);
-  let [tuple, setTuple] = useState([null, count]);
+  let [img, setImg] = useState([null, count]);
 
   //* Check which direction element should animate
-  if (tuple[1] !== count) setTuple([tuple[1], count]);
+  if (img[1] !== count) setImg([img[1], count]);
 
   //* check value of previous render
-  let prev = tuple[0];
+  let prev = img[0];
 
   //* check value from onClick to determine which exit animation
   let direction = count > prev ? 'increasing' : 'decreasing';
 
   //* motion element variants
-  let portfolioVariants = {
-    enter: (direction) => ({ x: direction === 'increasing' ? 500 : -500 }),
+  //! need to fix wonky side to side initial animation on scroll
+  const portfolioVariants = {
+    enter: (direction) => ({
+      x: direction === 'increasing' ? 500 : -500,
+    }),
     opacity: 0,
     transition: {
       duration: 0.15,
@@ -47,14 +55,25 @@ const Portfolio = () => {
   const increase = () => setCount(count + 1);
 
   //* onScroll animations
-  const portCard = useRef(null);
-  const isInView = useInView(portCard, { once: true });
+  const animation = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
 
-  let animate = {
-    transform: isInView ? 'none' : 'translateY(400px)',
-    opacity: isInView ? 1 : 0.1,
-    transition: 'all 0.9s cubic-bezier(0.9, 1, 0.55, 1) 0.2s',
-  };
+  useEffect(() => {
+    if (isInView) {
+      animation.start({
+        y: 0,
+        transition: {
+          type: 'spring',
+          stiffness: 100,
+        },
+      });
+    } else if (!isInView) {
+      animation.start({
+        y: '50vh',
+      });
+    }
+  }, [isInView, animation]);
 
   const portImgs = [
     {
@@ -104,33 +123,44 @@ const Portfolio = () => {
   const currImg = `${portImgs[Math.abs(count) % portImgs.length].path}`;
 
   return (
-    <section ref={portCard} style={animate} className='portfolio-container'>
-      <AnimatePresence custom={direction} exitBeforeEnter={true}>
-        <motion.div
-          key={count}
-          variants={portfolioVariants}
-          initial={'enter'}
-          animate={'center'}
-          exit={'exit'}
-          custom={direction}
-          className='portfolio-card'
-        >
-          <img
+    <section ref={ref} className='portfolio-container'>
+      <motion.div animate={animation} className='portfolio-card'>
+        <AnimatePresence custom={direction} exitBeforeEnter={true}>
+          <motion.img
+            variants={portfolioVariants}
+            key={count}
+            initial={'enter'}
+            animate={'center'}
+            exit={'exit'}
+            custom={direction}
             id='portfolio'
             className='portfolio-img'
             src={currImg}
             alt='Screenshot of portfolio application.'
           />
-          <div className='overlay' target='_blank' rel='noreferrer'>
+          <div className='overlay'>
             <h3 className='title'>
               {portImgs[Math.abs(count) % portImgs.length].title}
             </h3>
 
-            <a href={portImgs[Math.abs(count) % portImgs.length].url}>Site</a>
-            <a href={portImgs[Math.abs(count) % portImgs.length].repo}>Code</a>
+            <a
+              href={portImgs[Math.abs(count) % portImgs.length].url}
+              target='_blank'
+              rel='noreferrer'
+            >
+              Site
+            </a>
+            <a
+              href={portImgs[Math.abs(count) % portImgs.length].repo}
+              target='_blank'
+              rel='noreferrer'
+            >
+              Code
+            </a>
           </div>
-        </motion.div>
-      </AnimatePresence>
+        </AnimatePresence>
+      </motion.div>
+
       <div className='controls'>
         <HiChevronLeft onClick={decrease} className='arrows' />
         <HiChevronRight onClick={increase} className='arrows' />

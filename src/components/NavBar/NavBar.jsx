@@ -58,7 +58,6 @@ const NavBar = ({ handleShowContact }) => {
       </motion.a>
       <motion.a
         variants={navChildVariants}
-       /*  href='mailto:samuel.sweigart@gmail.com' */
         onClick={handleShowContact()}
       >
         Contact

@@ -10,19 +10,17 @@ import { useState } from 'react';
 function App() {
   const [showContact, setShowContact] = useState(false);
 
-  const handleShowContact = () => () => {
-    console.log(showContact);
+  const handleShowContact = () => () =>
     showContact ? setShowContact(false) : setShowContact(true);
-  };
 
   return (
     <div className='wrapper'>
       <Background />
-      <NavBar handleShowContact={handleShowContact}/>
+      <NavBar handleShowContact={handleShowContact} />
       <Hero />
       <About />
       <Portfolio />
-      <Contact showContact={showContact}/>
+      <Contact showContact={showContact} />
       <Footer />
     </div>
   );
