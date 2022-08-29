@@ -5,16 +5,24 @@ import Hero from './components/Hero/Hero';
 import NavBar from './components/NavBar/NavBar';
 import Portfolio from './components/Portfolio/Portfolio';
 import Footer from './components/Footer/Footer';
+import { useState } from 'react';
 
 function App() {
+  const [showContact, setShowContact] = useState(false);
+
+  const handleShowContact = () => () => {
+    console.log(showContact);
+    showContact ? setShowContact(false) : setShowContact(true);
+  };
+
   return (
     <div className='wrapper'>
       <Background />
-      <NavBar />
+      <NavBar handleShowContact={handleShowContact}/>
       <Hero />
       <About />
       <Portfolio />
-      <Contact />
+      <Contact showContact={showContact}/>
       <Footer />
     </div>
   );
