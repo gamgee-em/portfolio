@@ -13,21 +13,20 @@ const NavBar = ({ handleShowContact }) => {
 
   const navContainerVariants = {
     initial: {
-      y: -100,
+      y: -700,
     },
     animate: {
       y: 0,
       transition: {
         type: 'spring',
-        staggerChildren: 1.5,
-        delayChildren: .5,
+        bounce: 0.35,
       },
     },
   };
 
   const navChildVariants = {
     intial: {
-      y: -100,
+      y: 0,
       opacity: 0,
       scale: 0.75,
     },
@@ -35,10 +34,6 @@ const NavBar = ({ handleShowContact }) => {
       y: 0,
       opacity: 1,
       scale: 1,
-      transition: {
-        type: 'spring',
-        bounce: 0.25,
-      },
     },
   };
 
@@ -56,10 +51,7 @@ const NavBar = ({ handleShowContact }) => {
       <motion.a variants={navChildVariants} href='#portfolio'>
         Portfolio
       </motion.a>
-      <motion.a
-        variants={navChildVariants}
-        onClick={handleShowContact()}
-      >
+      <motion.a variants={navChildVariants} onClick={handleShowContact()}>
         Contact
       </motion.a>
       <motion.a

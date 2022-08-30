@@ -5,23 +5,23 @@ import portraitImg from '../../imgs/portrait.png';
 const Hero = () => {
   const heroContainerVariants = {
     initial: {
-      y: 0
+      y: 0,
     },
     animate: {
       y: 0,
       transition: {
         type: 'spring',
-        staggerChildren: .15,
-        delayChildren: .25,
-      }
-    }
-  }
+        staggerChildren: 0.15,
+        delayChildren: 0.25,
+      },
+    },
+  };
 
   const heroChildVarients = {
     initial: {
       y: 1100,
       opacity: 0,
-      scale: 0.75,
+      scale: 0.5,
     },
     animate: {
       y: 0,
@@ -29,17 +29,19 @@ const Hero = () => {
       scale: 1,
       transition: {
         type: 'spring',
-        bounce: .25
+        bounce: 0.35,
       },
     },
-  }
+  };
 
   return (
-    <motion.header variants={heroContainerVariants} initial={'initial'} animate={'animate'} className='hero-container'>
-      <motion.h2
-         variants={heroChildVarients}
-        className='intro'
-      >
+    <motion.header
+      variants={heroContainerVariants}
+      initial={'initial'}
+      animate={'animate'}
+      className='hero-container'
+    >
+      <motion.h2 variants={heroChildVarients} className='intro'>
         I'm Sam, a Web Developer and passionate problem solver. I build full
         stack javascript applications
       </motion.h2>

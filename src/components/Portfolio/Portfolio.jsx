@@ -57,20 +57,25 @@ const Portfolio = () => {
   //* onScroll animations
   const animation = useAnimation();
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
     if (isInView) {
       animation.start({
         y: 0,
+        opacity: 1,
+        scale: 1,
         transition: {
           type: 'spring',
           stiffness: 100,
+          delay: 0.25,
         },
       });
     } else if (!isInView) {
       animation.start({
-        y: '50vh',
+        y: 100,
+        opacity: 0,
+        scale: 0.5,
       });
     }
   }, [isInView, animation]);
@@ -123,10 +128,11 @@ const Portfolio = () => {
   const currImg = `${portImgs[Math.abs(count) % portImgs.length].path}`;
 
   return (
-    <section ref={ref} className='portfolio-container'>
+    <section className='portfolio-container'>
       <motion.div animate={animation} className='portfolio-card'>
         <AnimatePresence custom={direction} exitBeforeEnter={true}>
           <motion.img
+            ref={ref}
             variants={portfolioVariants}
             key={count}
             initial={'enter'}
