@@ -29,7 +29,6 @@ const Portfolio = () => {
   let direction = count > prev ? 'increasing' : 'decreasing';
 
   //* motion element variants
-  //! need to fix wonky side to side initial animation on scroll
   const portfolioVariants = {
     enter: (direction) => ({
       x: direction === 'increasing' ? 500 : -500,
@@ -128,7 +127,7 @@ const Portfolio = () => {
   const currImg = `${portImgs[Math.abs(count) % portImgs.length].path}`;
 
   return (
-    <section className='portfolio-container'>
+    <section id='portfolio' className='portfolio-container'>
       <motion.div animate={animation} className='portfolio-card'>
         <AnimatePresence custom={direction} exitBeforeEnter={true}>
           <motion.img
@@ -139,7 +138,6 @@ const Portfolio = () => {
             animate={'center'}
             exit={'exit'}
             custom={direction}
-            id='portfolio'
             className='portfolio-img'
             src={currImg}
             alt='Screenshot of portfolio application.'
