@@ -53,7 +53,7 @@
 
 <table>
     <tr>
-        <th colspan="1"> Front End </th>
+        <th colspan="1"> Client </th>
     </tr>
     <tr> 
         <td> <a href='https://www.npmjs.com/package/react'> React.js </a></td> 
@@ -69,6 +69,9 @@
     </tr>
     <tr> 
         <td> <a href='https://www.npmjs.com/package/react-scripts'> React-Scripts </a></td>
+    </tr>
+    <tr> 
+        <td> <a href='https://npm.io/package/@emailjs/browser'> Email.js </a></td>
     </tr>
 </table>
 
