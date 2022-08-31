@@ -29,11 +29,11 @@ const Contact = ({ showContact }) => {
     },
   };
 
+  //* emailjs contact form submit
   const form = useRef();
 
   const handleEmailSubmit = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_ID,
@@ -41,6 +41,7 @@ const Contact = ({ showContact }) => {
         form.current,
         process.env.REACT_APP_PUBLIC_KEY
       ).then((result) => {
+        console.log('Form: ', form);
           console.log(result.text);
         },(error) => {
           console.log(error.text);
@@ -64,40 +65,51 @@ const Contact = ({ showContact }) => {
               ref={form}
               onSubmit={handleEmailSubmit}
               className='contact-form'
-              action='/send_email'
-              method='post'
             >
               <h2>Get in touch...</h2>
               <input
                 className='fname'
                 type='text'
+                minLength='2'
+                maxLength='25'
                 name='fname'
                 placeholder='First Name'
+                required
               />
               <input
                 className='lname'
                 type='text'
+                minLength='2'
+                maxLength='25'
                 name='lname'
                 placeholder='Last Name'
+                required
               />
               <input
                 className='email'
                 type='email'
                 name='from'
                 placeholder='Your E-mail'
+                required
               />
               <input
                 className='subject'
                 type='text'
+                minLength='2'
+                maxLength='50'
                 name='subject'
                 placeholder='Subject'
+                required
               />
 
               <textarea
                 className='message'
                 type='text'
                 name='message'
+                minLength='2'
+                maxLength='250'
                 placeholder='Type your message here... 📬'
+                required
               />
               <button className='submit-btn'> Send </button>
             </form>

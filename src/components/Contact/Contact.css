@@ -11,6 +11,8 @@
 
 }
 
+
+
 .contact-form {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
@@ -33,6 +35,14 @@ textarea::placeholder {
   font-weight: bold;
   outline: none;
   border: none;
+}
+
+input:invalid, textarea:invalid {
+  outline: .12rem solid rgb(255, 0, 0) ;
+}
+
+input:valid, textarea:valid {
+  outline: .12rem solid rgb(0, 255, 0);
 }
 
 .contact-form .fname,
