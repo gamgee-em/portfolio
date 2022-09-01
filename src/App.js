@@ -20,7 +20,7 @@ function App() {
       <Hero />
       <About />
       <Portfolio />
-      <Contact showContact={showContact} />
+      <Contact showContact={showContact} handleShowContact={handleShowContact}/>
       <Footer />
     </div>
   );

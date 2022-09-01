@@ -23,7 +23,7 @@ footer .social-icons {
   cursor: pointer;
 }
 
-.social-icons svg {
+footer .social-icons svg {
   height: 2rem;
   width: auto;
   margin: 0 0.5rem;
@@ -32,7 +32,7 @@ footer .social-icons {
   transition: all 0.15s;
 }
 
-.social-icons svg:hover {
+footer .social-icons svg:hover {
   transform: scale(1.2);
 }
 

@@ -1,9 +1,13 @@
-import { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import { AnimatePresence, motion } from 'framer-motion';
 import './Contact.css';
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+//! icons https://react-icons.github.io/react-icons
+import { TiSocialLinkedin } from 'react-icons/ti';
+import { GoMarkGithub } from 'react-icons/go';
+import { FaTimesCircle } from 'react-icons/fa';
 
-const Contact = ({ showContact }) => {
+const Contact = ({ showContact, handleShowContact }) => {
   const contactModalVariants = {
     initial: {
       opacity: 0,
@@ -40,10 +44,12 @@ const Contact = ({ showContact }) => {
         process.env.REACT_APP_TEMPLATE_ID,
         form.current,
         process.env.REACT_APP_PUBLIC_KEY
-      ).then((result) => {
-        console.log('Form: ', form);
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-        },(error) => {
+        },
+        (error) => {
           console.log(error.text);
         }
       );
@@ -53,6 +59,7 @@ const Contact = ({ showContact }) => {
   return (
     <>
       <AnimatePresence exitBeforeEnter={true}>
+     
         {showContact && (
           <motion.section
             className='contact'
@@ -61,6 +68,7 @@ const Contact = ({ showContact }) => {
             animate='animate'
             exit='exit'
           >
+            <FaTimesCircle onClick={handleShowContact()} className='close'/>
             <form
               ref={form}
               onSubmit={handleEmailSubmit}
@@ -111,10 +119,27 @@ const Contact = ({ showContact }) => {
                 placeholder='Type your message here... 📬'
                 required
               />
+              <div className='social-icons'>
+                <a
+                  href='https://github.com/gamgee-em'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  <GoMarkGithub className='github' />
+                </a>
+                <a
+                  href='https://linkedin.com/in/sam-sweigart'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  <TiSocialLinkedin className='linked-in' />
+                </a>
+              </div>
               <button className='submit-btn'> Send </button>
             </form>
           </motion.section>
         )}
+        
       </AnimatePresence>
     </>
   );
