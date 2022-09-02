@@ -66,19 +66,24 @@ const Portfolio = () => {
         scale: 1,
         transition: {
           type: 'spring',
-          stiffness: 100,
-          delay: 0.25,
+          bounce: 0.35,
         },
       });
     } else if (!isInView) {
       animation.start({
         y: 100,
         opacity: 0,
-        scale: 0.5,
+        scale: 0.75,
+        transition: {
+          type: 'spring',
+          stiffness: 100,
+          delay: 0.1,
+        },
       });
     }
   }, [isInView, animation]);
 
+  //* images array for carousel
   const portImgs = [
     {
       id: 1,
@@ -124,6 +129,7 @@ const Portfolio = () => {
     },
   ];
 
+  //* current image displayed
   const currImg = `${portImgs[Math.abs(count) % portImgs.length].path}`;
 
   return (
@@ -164,7 +170,6 @@ const Portfolio = () => {
           </div>
         </AnimatePresence>
       </motion.div>
-
       <div className='controls'>
         <HiChevronLeft onClick={decrease} className='arrows' />
         <HiChevronRight onClick={increase} className='arrows' />

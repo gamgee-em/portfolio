@@ -5,19 +5,22 @@
   grid-row: 1 / 2;
   justify-self: center;
   height: 100vh;
+  width: 70vw;
+
   max-height: 900px;
-  width: 70%;
+  max-width: 1344px;
 }
 
 .intro {
   align-self: end;
   font-size: 3.35vw;
+  font-size: clamp(3.35px, 3.35vw, 4rem);
   color: rgb(255, 255, 255);
   text-shadow: 2px 1px 1px rgba(0, 0, 0);
 }
 
 .portrait {
-  height: 23vw;
+  width: clamp(23vw, 23vw, 500px);
   justify-self: end;
   align-self: end;
 }
@@ -50,14 +53,15 @@
 
 @media screen and (max-width: 976px) {
   .hero-container {
-    width: 90%;
     grid-template-rows: 1fr 2fr 1fr;
     grid-template-columns: 1fr;
+    width: 90vw;
     text-align: center;
   }
 
   .portrait {
-    height: 75%;
+    margin: 6rem 0 0 0;
+    width: clamp(250px, 23vw, 500px);
     align-self: end;
     justify-self: center;
   }

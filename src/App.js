@@ -10,10 +10,7 @@ import { useState } from 'react';
 function App() {
   const [showContact, setShowContact] = useState(false);
 
-  const handleShowContact = () => {
-    return () =>  showContact ? setShowContact(false) : setShowContact(true);
-    
-  };
+  const handleShowContact = () => () => showContact ? setShowContact(false) : setShowContact(true);
 
   return (
     <div className='wrapper'>

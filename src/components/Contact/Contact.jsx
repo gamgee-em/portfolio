@@ -8,6 +8,7 @@ import { GoMarkGithub } from 'react-icons/go';
 import { FaTimesCircle } from 'react-icons/fa';
 
 const Contact = ({ setShowContact, showContact, handleShowContact }) => {
+
   const contactModalVariants = {
     initial: {
       opacity: 0,
@@ -32,6 +33,9 @@ const Contact = ({ setShowContact, showContact, handleShowContact }) => {
       x: '-12vw',
     },
   };
+
+  //* contact form email confirmation overlay
+  const [emailSent, setEmailSent] = useState(false);
 
   const sentVariants = {
     initial: {
@@ -72,8 +76,6 @@ const Contact = ({ setShowContact, showContact, handleShowContact }) => {
         }, 2500);
       });
   };
-
-  const [emailSent, setEmailSent] = useState(false);
 
   return (
     <>
