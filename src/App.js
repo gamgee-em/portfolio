@@ -10,8 +10,10 @@ import { useState } from 'react';
 function App() {
   const [showContact, setShowContact] = useState(false);
 
-  const handleShowContact = () => () =>
-    showContact ? setShowContact(false) : setShowContact(true);
+  const handleShowContact = () => {
+    return () =>  showContact ? setShowContact(false) : setShowContact(true);
+    
+  };
 
   return (
     <div className='wrapper'>
@@ -20,7 +22,11 @@ function App() {
       <Hero />
       <About />
       <Portfolio />
-      <Contact showContact={showContact} handleShowContact={handleShowContact}/>
+      <Contact
+        setShowContact={setShowContact}
+        showContact={showContact}
+        handleShowContact={handleShowContact}
+      />
       <Footer />
     </div>
   );
