@@ -154,17 +154,27 @@ form .submit-btn {
 }
 
 .email-sent svg {
-  stroke: rgb(0, 255, 0);
+  stroke:rgb(0, 0, 0);
+  stroke-width: .25;
   fill: rgb(0, 255, 0);
   height: 4rem;
   justify-self: center;
   align-self: end;
-  padding: 0 0 2rem 0;
+  padding: 0 0 .5rem 0;
 }
 
 .email-sent h3 {
+  text-align: center;
   color: white;
+  text-shadow: 2px 1px 1px rgba(0, 0, 0);
   font-size: 2rem;
+}
+
+.email-sent h6 {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 0px 0px rgba(0, 0, 0);
+  padding: .5rem 0 0 0;
 }
 
 @media screen and (max-width: 976px) {
