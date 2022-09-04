@@ -149,6 +149,12 @@ form .submit-btn {
   background-color: rgba(0, 0, 0, 0.842);
 }
 
+.spinner {
+  align-self: center;
+  border-radius: 8px;
+  border-color: rgb(0, 255, 0);
+}
+
 .email-sent svg {
   stroke: rgb(0, 0, 0);
   stroke-width: 0.25;

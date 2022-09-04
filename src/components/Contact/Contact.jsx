@@ -6,9 +6,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { TiSocialLinkedin } from 'react-icons/ti';
 import { GoMarkGithub } from 'react-icons/go';
 import { FaTimesCircle } from 'react-icons/fa';
+import GridLoader from 'react-spinners/GridLoader';
 
 const Contact = ({ setShowContact, showContact, handleShowContact }) => {
-
   const contactModalVariants = {
     initial: {
       opacity: 0,
@@ -44,12 +44,19 @@ const Contact = ({ setShowContact, showContact, handleShowContact }) => {
     animate: {
       opacity: 1,
     },
+    exit: {
+      opacity: 0,
+      transition:{
+        duration: 1
+      }
+    },
   };
 
   //* emailjs contact form submit
   const form = useRef();
 
   const handleEmailSubmit = (e) => {
+    setLoading(true);
     e.preventDefault();
     emailjs
       .sendForm(
@@ -59,7 +66,7 @@ const Contact = ({ setShowContact, showContact, handleShowContact }) => {
         process.env.REACT_APP_PUBLIC_KEY
       )
       .then((result, error) => {
-        if (result.status === 200) {
+        if (result.status === 426) {
           console.log(result.text);
         } else {
           console.log(error.text);
@@ -67,6 +74,7 @@ const Contact = ({ setShowContact, showContact, handleShowContact }) => {
       })
       .then(() => {
         setEmailSent(true);
+        setLoading(false);
       })
       .then(() => {
         setTimeout(() => {
@@ -76,6 +84,9 @@ const Contact = ({ setShowContact, showContact, handleShowContact }) => {
         }, 2500);
       });
   };
+
+  let [loading, setLoading] = useState(false);
+  let color = 'rgb(0, 255, 0)';
 
   return (
     <>
@@ -159,12 +170,29 @@ const Contact = ({ setShowContact, showContact, handleShowContact }) => {
                 </a>
               </div>
               <button className='submit-btn'> Send </button>
+              {loading && (
+                <motion.div
+                  className='email-sent'
+                  variants={sentVariants}
+                  initial={'initial'}
+                  animate={'animate'}
+                  exit={'exit'}
+                  transition={{ duration: 1.5 }}
+                >
+                  <GridLoader
+                    loading={loading}
+                    color={color}
+                    size={25}                    
+                    className='spinner'
+                  />
+                </motion.div>
+              )}
+
               {emailSent && (
                 <motion.div
                   variants={sentVariants}
                   initial={'initial'}
                   animate={'animate'}
-                  transition={{ duration: 1.5 }}
                   className='email-sent'
                 >
                   <svg
