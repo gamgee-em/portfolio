@@ -14,7 +14,7 @@ const Contact = ({ setShowContact, showContact, handleShowContact }) => {
       opacity: 0,
       scale: 0,
       y: '-50vh',
-      x: '-12vw',
+      x: '-10vw',
     },
     animate: {
       opacity: 1,
@@ -29,7 +29,7 @@ const Contact = ({ setShowContact, showContact, handleShowContact }) => {
     exit: {
       opacity: 0,
       scale: 0,
-      y: '-45vh',
+      y: '-42vh',
       x: '-12vw',
     },
   };
@@ -39,14 +39,14 @@ const Contact = ({ setShowContact, showContact, handleShowContact }) => {
 
   const sentVariants = {
     initial: {
-      opacity: 0,
+      opacity: 1,
     },
     animate: {
       opacity: 1,
     },
     exit: {
       opacity: 0,
-      transition:{
+      transition: {
         duration: 1
       }
     },
@@ -66,7 +66,7 @@ const Contact = ({ setShowContact, showContact, handleShowContact }) => {
         process.env.REACT_APP_PUBLIC_KEY
       )
       .then((result, error) => {
-        if (result.status === 426) {
+        if (result.status === 200) {
           console.log(result.text);
         } else {
           console.log(error.text);

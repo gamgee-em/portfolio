@@ -36,7 +36,7 @@ nav a {
 }
 
 /* Download CV Link */
-nav a:nth-child(4n) {
+nav #resume {
   display: flex;
   justify-self: end;
   margin: 0 2rem 0 0;
@@ -53,15 +53,43 @@ nav a svg {
   padding: 0 0.25rem 0 0;
 }
 
+.download-modal {
+  display: grid;
+  position: absolute;
+  min-height: 3rem;
+  min-width: 7rem;
+  top: 10vh;
+  right: 8vw;
+  background-color: teal;
+  outline: 1px solid rgb(0, 0, 0);
+  border-radius: 8px;
+}
+
+.download {
+  justify-self: center;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0;
+  background-color: transparent;
+}
+
+.download:hover {
+  background-color: transparent;
+  box-shadow: none;
+}
+
 @media screen and (max-width: 576px) {
   /* Hide about & contact anchor tags */
-  nav a:nth-child(-n + 1),
-  nav a:nth-child(-n + 2) {
+  nav #about, nav #portfolio {
     display: none;
   }
 
-  nav a:nth-child(4n) {
+  nav #resume {
     position: absolute;
     right: 1rem;
+  }
+  
+  .download {
+    font-size: .9rem
   }
 }

@@ -1,6 +1,6 @@
 import './NavBar.css';
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import resumePDF from './resume-sam-sweigart.pdf';
 import { CgSoftwareDownload } from 'react-icons/cg';
 
@@ -37,6 +37,37 @@ const NavBar = ({ handleShowContact }) => {
     },
   };
 
+  const resumeVariants = {
+    initial: {
+      opacity: 0,
+      scale: 0,
+      y: '-8vh',
+      x: '2.5vw',
+    },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      x: 0,
+      transition: {
+        type: 'spring',
+        bounce: 0.25,
+      },
+    },
+    exit: {
+      opacity: 0,
+      scale: 0,
+      y: '-8vh',
+      x: '2.5vw',
+    },
+  };
+
+  const [showResume, setShowResume] = useState(false);
+
+  const handleShowResume = () => {
+    showResume ? setShowResume(false) : setShowResume(true);
+  };
+
   return (
     <motion.nav
       variants={navContainerVariants}
@@ -45,26 +76,46 @@ const NavBar = ({ handleShowContact }) => {
       className={color ? 'nav nav-bg' : 'nav'}
       id='nav-bar'
     >
-      <motion.a variants={navChildVariants} href='#about'>
+      <motion.a id='about' variants={navChildVariants} href='#about'>
         About
       </motion.a>
-      <motion.a variants={navChildVariants} href='#portfolio'>
+      <motion.a id='portfolio' variants={navChildVariants} href='#portfolio'>
         Portfolio
       </motion.a>
-      <motion.a variants={navChildVariants} onClick={handleShowContact()}>
+      <motion.a id='contact' variants={navChildVariants} onClick={handleShowContact()}>
         Contact
       </motion.a>
       <motion.a
+      className='resume'
+        onClick={handleShowResume}
         variants={navChildVariants}
-        href={resumePDF}
-        download
-        id='cv'
-        rel='noreferrer'
-        target={'_blank'}
+        id='resume'
       >
         <CgSoftwareDownload />
         Resume
       </motion.a>
+      <AnimatePresence>
+        {showResume && (
+          <motion.div
+            variants={resumeVariants}
+            initial={'initial'}
+            animate={'animate'}
+            exit={'exit'}
+            className='download-modal'
+            whileHover={{backgroundColor:'#008080', scale: 1.1}}
+          >
+            <motion.a
+              className='download'
+              href={resumePDF}
+              download
+              rel='noreferrer'
+              target={'_blank'}
+            >
+              Download
+            </motion.a>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 };
