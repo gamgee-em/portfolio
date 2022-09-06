@@ -53,7 +53,7 @@ const Hero = () => {
       />
       <motion.a
         variants={heroChildVarients}
-        href='#about'
+        href='#about-container'
         className='start-btn'
       >
         Start Here

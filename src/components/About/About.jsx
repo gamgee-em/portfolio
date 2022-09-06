@@ -43,7 +43,7 @@ const About = () => {
   hesitate to reach out!`
 
   return (
-    <section id='about' className='about-container'>
+    <section id='about-container' className='about-container'>
       <AnimatePresence>
         <motion.p ref={ref} className='about' animate={animation}>
           {text}

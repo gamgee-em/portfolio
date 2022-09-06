@@ -133,7 +133,7 @@ const Portfolio = () => {
   const currImg = `${portImgs[Math.abs(count) % portImgs.length].path}`;
 
   return (
-    <section id='portfolio' className='portfolio-container'>
+    <section id='portfolio-container' className='portfolio-container'>
       <motion.div animate={animation} className='portfolio-card'>
         <AnimatePresence custom={direction} exitBeforeEnter={true}>
           <motion.img

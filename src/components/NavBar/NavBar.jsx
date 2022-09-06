@@ -76,10 +76,10 @@ const NavBar = ({ handleShowContact }) => {
       className={color ? 'nav nav-bg' : 'nav'}
       id='nav-bar'
     >
-      <motion.a id='about' variants={navChildVariants} href='#about'>
+      <motion.a id='about' variants={navChildVariants} href='#about-container'>
         About
       </motion.a>
-      <motion.a id='portfolio' variants={navChildVariants} href='#portfolio'>
+      <motion.a id='portfolio' variants={navChildVariants} href='#portfolio-container'>
         Portfolio
       </motion.a>
       <motion.a id='contact' variants={navChildVariants} onClick={handleShowContact()}>
