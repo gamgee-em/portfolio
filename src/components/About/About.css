@@ -11,11 +11,10 @@
   max-width: 1728px;
   font-size: 2rem;
   font-weight: bold;
-  color: rgb(255, 255, 255);
 }
 
 .about {
-  text-shadow: 2px 1px 1px black;
+  text-shadow: var(--text-shadow);
 }
 
 @media screen and (max-width: 576px) {

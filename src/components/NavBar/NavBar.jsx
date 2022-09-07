@@ -102,7 +102,7 @@ const NavBar = ({ handleShowContact }) => {
             animate={'animate'}
             exit={'exit'}
             className='download-modal'
-            whileHover={{backgroundColor:'#008080', scale: 1.1}}
+            whileHover={{backgroundColor:'rgb(0, 128, 128)', scale: 1.05}}
           >
             <motion.a
               className='download'

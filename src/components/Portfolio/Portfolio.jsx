@@ -153,20 +153,23 @@ const Portfolio = () => {
               {portImgs[Math.abs(count) % portImgs.length].title}
             </h3>
 
-            <a
+            <motion.a
               href={portImgs[Math.abs(count) % portImgs.length].url}
               target='_blank'
               rel='noreferrer'
+              whileHover={{scale: 1.05}}
             >
               Site
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href={portImgs[Math.abs(count) % portImgs.length].repo}
               target='_blank'
               rel='noreferrer'
+              whileHover={{scale: 1.05}}
+
             >
               Code
-            </a>
+            </motion.a>
           </div>
         </AnimatePresence>
       </motion.div>

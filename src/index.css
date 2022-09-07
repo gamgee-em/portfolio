@@ -1,6 +1,14 @@
+:root {
+  --text-color: rgb(255, 255, 255);
+  --btn-bg: rgb(0, 128, 128);
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+  --text-shadow: 1px 1px 0px rgb(0, 0, 0);
+}
+
 * {
   margin: 0;
   padding: 0;
+  color: var(--text-color)
 }
 
 html,
@@ -24,7 +32,7 @@ body::-webkit-scrollbar {
   display: grid;
   max-width: 1920px;
   max-height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--overlay-bg);
   overflow: hidden;
 }
 

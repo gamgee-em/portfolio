@@ -1,5 +1,5 @@
 import './Hero.css';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import portraitImg from '../../imgs/portrait.png';
 
 const Hero = () => {
@@ -17,7 +17,7 @@ const Hero = () => {
     },
   };
 
-  const heroChildVarients = {
+  const heroChildVariants = {
     initial: {
       y: 1100,
       opacity: 0,
@@ -34,6 +34,19 @@ const Hero = () => {
     },
   };
 
+  const heroBtnVariants = {
+    initial: {
+      y:1100,
+    },
+    animate: {
+      y:0,
+      transition: {
+        type: 'spring',
+        bounce: 0.25,
+      },
+    }
+  }
+
   return (
     <motion.header
       variants={heroContainerVariants}
@@ -41,23 +54,27 @@ const Hero = () => {
       animate={'animate'}
       className='hero-container'
     >
-      <motion.h2 variants={heroChildVarients} className='intro'>
+      <motion.h2 variants={heroChildVariants} className='intro'>
         I'm Sam, a Web Developer and passionate problem solver. I build full
         stack javascript applications
       </motion.h2>
       <motion.img
-        variants={heroChildVarients}
+        variants={heroChildVariants}
         className='portrait'
         src={portraitImg}
         alt='Portrait of Developer'
       />
+      <AnimatePresence>
       <motion.a
-        variants={heroChildVarients}
+        /* variants={heroChildVariants} */
+        variants={heroBtnVariants}
         href='#about-container'
         className='start-btn'
+        whileHover={{scale: 1.05}}
       >
         Start Here
       </motion.a>
+      </AnimatePresence>
     </motion.header>
   );
 };

@@ -47,8 +47,8 @@ const Contact = ({ setShowContact, showContact, handleShowContact }) => {
     exit: {
       opacity: 0,
       transition: {
-        duration: 1
-      }
+        duration: 1,
+      },
     },
   };
 
@@ -169,7 +169,12 @@ const Contact = ({ setShowContact, showContact, handleShowContact }) => {
                   <TiSocialLinkedin className='linked-in' />
                 </a>
               </div>
-              <button className='submit-btn'> Send </button>
+              <motion.button
+                className='submit-btn'
+                whileHover={{ scale: 1.05 }}
+              >
+                Send
+              </motion.button>
               {loading && (
                 <motion.div
                   className='email-sent'
@@ -182,7 +187,7 @@ const Contact = ({ setShowContact, showContact, handleShowContact }) => {
                   <GridLoader
                     loading={loading}
                     color={color}
-                    size={25}                    
+                    size={25}
                     className='spinner'
                   />
                 </motion.div>

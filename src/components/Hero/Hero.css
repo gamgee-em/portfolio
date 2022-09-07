@@ -6,7 +6,6 @@
   justify-self: center;
   height: 100vh;
   width: 70vw;
-
   max-height: 900px;
   max-width: 1344px;
 }
@@ -15,8 +14,7 @@
   align-self: end;
   font-size: 3.35vw;
   font-size: clamp(3.35px, 3.35vw, 4rem);
-  color: rgb(255, 255, 255);
-  text-shadow: 2px 1px 1px rgba(0, 0, 0);
+  text-shadow: var(--text-shadow);
 }
 
 .portrait {
@@ -31,24 +29,16 @@
   justify-self: center;
   align-self: center;
   padding: 1rem 3rem;
-  color: rgb(255, 255, 255);
-  background-color: teal;
+  background-color: var(--btn-bg);
   font-weight: bold;
   border-radius: 8px;
   text-decoration: none;
-  text-shadow: 0.5px 1px rgba(0, 0, 0);
+  text-shadow: var(--text-shadow);
   box-shadow: 0px 0px 0px 2px rgba(0, 0, 0);
-
-  transition-property: background-color, text-shadow, box-shadow;
-  transition-duration: 0.15s;
-  transition-timing-function: ease-in;
 }
 
 .start-btn:hover {
-  color: teal;
-  background-color: rgb(255, 255, 255);
-  text-shadow: 0.5px 0.5px teal;
-  box-shadow: 0px 0px 0px 1px rgb(0, 0, 0);
+  transform: scale(1.05);
 }
 
 @media screen and (max-width: 976px) {
